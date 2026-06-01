@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head><meta charset="UTF-8"><style>
+  body { font-family: system-ui, sans-serif; color: #2c2c2c; max-width: 600px; margin: 0 auto; padding: 24px; }
+  h1 { font-size: 18px; color: #1a1a2e; border-bottom: 2px solid #1a1a2e; padding-bottom: 8px; }
+  .stat { display: flex; justify-content: space-between; padding: 8px 0; border-bottom: 1px solid #e2e2e8; }
+  .label { color: #666; }
+  .value { font-weight: 600; color: #1a1a2e; }
+  .footer { margin-top: 24px; font-size: 12px; color: #999; }
+</style></head>
+<body>
+<h1>Job Agent Daily Digest</h1>
+<div class="stat"><span class="label">Jobs found today</span><span class="value">{{ jobs_found | default(0) }}</span></div>
+<div class="stat"><span class="label">Applications sent</span><span class="value">{{ applications | default(0) }}</span></div>
+<div class="stat"><span class="label">Replies received</span><span class="value">{{ replies | default(0) }}</span></div>
+<div class="stat"><span class="label">Follow-ups pending</span><span class="value">{{ followups_pending | default(0) }}</span></div>
+<div class="stat"><span class="label">Interviews scheduled</span><span class="value">{{ interviews | default(0) }}</span></div>
+<div class="footer">Job Agent · running locally · {{ date | default("today") }}</div>
+</body>
+</html>

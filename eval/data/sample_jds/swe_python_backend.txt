@@ -1,0 +1,23 @@
+Software Engineer — Backend (Python)
+
+We are looking for a backend engineer to join our platform team.
+
+Requirements:
+- 2+ years of Python experience (FastAPI or Django preferred)
+- Experience with PostgreSQL and Redis
+- Familiarity with Docker and Kubernetes
+- Experience with async Python (asyncio, aiohttp)
+- Understanding of REST API design
+- Experience with CI/CD pipelines (GitHub Actions preferred)
+
+Nice to have:
+- Experience with LangChain or LLM integrations
+- Familiarity with Celery for task queuing
+- Open source contributions
+
+Responsibilities:
+- Design and build scalable backend APIs
+- Write and maintain async services
+- Collaborate with frontend engineers on API contracts
+- Review code and mentor junior engineers
+- Participate in on-call rotation

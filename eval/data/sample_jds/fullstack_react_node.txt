@@ -1,0 +1,23 @@
+Full Stack Engineer — React + Node.js
+
+Join our product team building the next generation of our SaaS platform.
+
+Requirements:
+- 3+ years full stack experience
+- Strong React (hooks, context, performance optimisation)
+- Node.js / Express or Fastify backend experience
+- TypeScript (strict mode)
+- PostgreSQL or MySQL
+- REST and GraphQL APIs
+
+Nice to have:
+- Next.js App Router experience
+- AWS or GCP deployment experience
+- Playwright or Cypress for e2e testing
+- Tailwind CSS
+
+What you will do:
+- Own features from design to deployment
+- Build reusable component libraries
+- Improve core web vitals and page performance
+- Work closely with product and design

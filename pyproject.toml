@@ -1,0 +1,100 @@
+[project]
+name = "job-agent"
+version = "0.1.0"
+description = "LangGraph multi-agent job hunting system"
+requires-python = ">=3.12"
+dependencies = [
+    # Orchestration
+    "langgraph>=0.2",
+    "langchain>=0.3",
+    "langchain-openai",
+    "langchain-anthropic",
+    # LLM router
+    "litellm>=1.40",
+    # Browser
+    "playwright",
+    "playwright-stealth",
+    # Resume parsing
+    "pdfplumber",
+    "pymupdf",
+    "python-docx",
+    # Queue + scheduling
+    "celery[redis]",
+    "redis",
+    "apscheduler",
+    # Vector
+    "chromadb",
+    # DB
+    "sqlalchemy[asyncio]>=2.0",
+    "alembic",
+    "asyncpg",
+    # Email
+    "imaplib2",
+    "google-auth-oauthlib",
+    "google-auth-httplib2",
+    # Scrape / search
+    "beautifulsoup4",
+    "httpx",
+    "tavily-python",
+    # Captcha
+    "2captcha-python",
+    # Notifications
+    "python-telegram-bot",
+    # Observability
+    "langsmith",
+    "structlog",
+    "opentelemetry-sdk",
+    "opentelemetry-exporter-otlp",
+    # Resilience
+    "tenacity",
+    "aiolimiter",
+    # Utils
+    "pydantic>=2.0",
+    "pydantic-settings",
+    "pyyaml",
+    "cryptography",
+    "jinja2",
+    "typer",
+    "python-statemachine",
+    "python-multipart",
+    # API
+    "fastapi",
+    "uvicorn[standard]",
+]
+
+[project.optional-dependencies]
+ai-detect = [
+    "gptzero>=1.0",  # Phase 3: AI detection gate
+]
+dev = [
+    "ruff",
+    "mypy",
+    "pytest",
+    "pytest-asyncio",
+    "pytest-cov",
+    "respx",
+    "hypothesis",
+    "import-linter",
+    "detect-secrets",
+    "types-PyYAML",
+    "types-redis",
+    "types-beautifulsoup4",
+    "pip-audit",
+    "aiosqlite",
+]
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[tool.hatch.build.targets.wheel]
+packages = ["job_agent"]
+
+[tool.pytest.ini_options]
+asyncio_mode = "auto"
+testpaths = ["tests"]
+addopts = "--cov=job_agent --cov-report=term-missing"
+
+[tool.coverage.run]
+source = ["job_agent"]
+omit = ["*/tests/*", "*/migrations/*"]

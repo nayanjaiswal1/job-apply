@@ -1,0 +1,6 @@
+from typing import Protocol
+
+
+class EmbedderPort(Protocol):
+    async def embed(self, text: str) -> list[float]: ...
+    def cosine_similarity(self, a: list[float], b: list[float]) -> float: ...

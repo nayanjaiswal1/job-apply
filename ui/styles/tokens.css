@@ -1,0 +1,56 @@
+:root {
+  --color-brand:         #1a1a2e;
+  --color-brand-muted:   #4a4a6a;
+  --color-body:          #2c2c2c;
+  --color-muted:         #666666;
+  --color-border:        #e2e2e8;
+  --color-surface:       #ffffff;
+  --color-raised:        #f7f7fb;
+  --color-danger:        #d92b2b;
+  --color-success:       #1e7d4a;
+  --color-warning:       #b45309;
+
+  --background:            220 27% 98%;
+  --foreground:            224 10% 17%;
+  --primary:               232 27% 14%;
+  --primary-foreground:    0 0% 100%;
+  --secondary:             220 14% 96%;
+  --secondary-foreground:  224 10% 17%;
+  --muted:                 220 14% 96%;
+  --muted-foreground:      220 9% 46%;
+  --border:                220 13% 91%;
+  --input:                 220 13% 91%;
+  --ring:                  232 27% 14%;
+  --destructive:           0 72% 51%;
+  --destructive-foreground: 0 0% 100%;
+  --radius: 0.5rem;
+
+  --font-sans: 'Inter', system-ui, sans-serif;
+  --font-mono: 'JetBrains Mono', 'Fira Code', monospace;
+
+  --shadow-sm: 0 1px 2px 0 rgb(0 0 0 / 0.05);
+  --shadow:    0 1px 3px 0 rgb(0 0 0 / 0.1), 0 1px 2px -1px rgb(0 0 0 / 0.1);
+  --shadow-lg: 0 10px 15px -3px rgb(0 0 0 / 0.1);
+
+  --ease:     cubic-bezier(0.4, 0, 0.2, 1);
+  --duration: 150ms;
+}
+
+.dark {
+  --color-brand:        #7b8cde;
+  --color-body:         #e8e8f0;
+  --color-muted:        #9999aa;
+  --color-border:       #2c2c40;
+  --color-surface:      #0f0f1a;
+  --color-raised:       #1a1a2e;
+
+  --background:         232 27% 7%;
+  --foreground:         220 14% 92%;
+  --primary:            232 60% 67%;
+  --primary-foreground: 232 27% 7%;
+  --secondary:          232 20% 14%;
+  --secondary-foreground: 220 14% 92%;
+  --muted:              232 20% 14%;
+  --muted-foreground:   220 9% 60%;
+  --border:             232 20% 20%;
+}

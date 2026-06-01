@@ -1,0 +1,18 @@
+Machine Learning Engineer
+
+We are building ML-powered features across our product suite.
+
+Requirements:
+- 3+ years ML engineering (not just research)
+- Python: PyTorch or TensorFlow, scikit-learn
+- MLOps: experiment tracking (MLflow or W&B), model serving
+- Experience with LLMs: fine-tuning, RAG, prompt engineering
+- SQL + data pipelines
+- Familiarity with cloud ML services (AWS SageMaker or GCP Vertex)
+
+Responsibilities:
+- Train, evaluate, and deploy ML models to production
+- Build data pipelines for model training
+- Collaborate with product to define ML features
+- Monitor model performance and handle drift
+- Write clean, testable Python code — not just notebooks

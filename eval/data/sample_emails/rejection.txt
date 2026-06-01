@@ -1,0 +1,13 @@
+From: noreply@startup.io
+Subject: Your application to Startup.io
+
+Hi,
+
+Thank you for your interest in the Backend Engineer role at Startup.io and for taking the time to speak with our team.
+
+After careful consideration, we have decided to move forward with other candidates whose experience more closely matches our current needs. We will not be moving forward with your application at this time.
+
+We appreciate the time you invested in the process and wish you the best in your job search.
+
+Best,
+The Startup.io Team

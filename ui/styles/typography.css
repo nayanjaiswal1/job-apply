@@ -1,0 +1,9 @@
+.text-display   { @apply text-3xl font-bold leading-tight tracking-tight; }
+.text-heading-1 { @apply text-2xl font-semibold leading-tight; }
+.text-heading-2 { @apply text-xl  font-semibold leading-tight; }
+.text-heading-3 { @apply text-lg  font-medium  leading-snug; }
+.text-body      { @apply text-base font-normal leading-relaxed; }
+.text-body-sm   { @apply text-sm   font-normal leading-relaxed; }
+.text-caption   { @apply text-xs   font-normal text-muted-foreground; }
+.text-label     { @apply text-xs   font-semibold uppercase tracking-widest; }
+.text-code      { @apply text-sm   font-mono; }

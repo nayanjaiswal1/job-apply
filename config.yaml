@@ -1,0 +1,52 @@
+chroma:
+  job_embeddings_collection: "job_embeddings"
+  question_embeddings_collection: "question_embeddings"
+
+models:
+  orchestrator:
+    primary: claude-sonnet-4-6
+    fallback: gpt-4o
+    min_mode: gpt-4o-mini
+  resume_rewrite:
+    primary: claude-sonnet-4-6
+    fallback: gpt-4o
+    min_mode: ollama/llama3.1:8b
+  cover_letter:
+    primary: claude-sonnet-4-6
+    fallback: minimax/abab6.5s-chat
+    min_mode: ollama/mistral:7b
+  job_scoring:
+    primary: gpt-4o-mini
+    fallback: gemini/gemini-1.5-flash
+    min_mode: groq/llama3-8b-8192
+  company_research:
+    primary: gpt-4o
+    fallback: claude-sonnet-4-6
+    min_mode: gpt-4o-mini
+  referral_dm:
+    primary: claude-sonnet-4-6
+    fallback: gpt-4o
+    min_mode: ollama/mistral:7b
+  mail_classifier:
+    primary: gpt-4o-mini
+    fallback: groq/llama3-8b-8192
+    min_mode: groq/llama3-8b-8192
+  form_screening:
+    primary: gpt-4o-mini
+    fallback: gemini/gemini-1.5-flash
+    min_mode: ollama/llama3.1:8b
+  interview_prep:
+    primary: gpt-4o
+    fallback: claude-sonnet-4-6
+    min_mode: gpt-4o-mini
+
+notifications:
+  telegram: false
+  email_digest: true
+
+schedule:
+  job_search_interval_hours: 6
+  linkedin_post_interval_hours: 4
+  mail_watcher_interval_minutes: 30
+  followup_time: "09:00"
+  stale_check_time: "08:00"

@@ -1,0 +1,6 @@
+from typing import Any, Protocol
+
+
+class NotifierPort(Protocol):
+    async def send_alert(self, event: str, payload: dict[str, Any]) -> None: ...
+    async def send_digest(self, subject: str, body_html: str, body_text: str) -> None: ...

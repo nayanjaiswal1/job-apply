@@ -1,0 +1,11 @@
+From: careers@bigcorp.com
+Subject: Thank you for applying — Software Engineer
+
+Thank you for applying for the Software Engineer position at BigCorp.
+
+We have received your application and will review it carefully. Our team typically responds within 2–3 weeks. If your experience matches our requirements, we will reach out to schedule next steps.
+
+Thank you for your interest in BigCorp.
+
+Regards,
+BigCorp Recruitment Team

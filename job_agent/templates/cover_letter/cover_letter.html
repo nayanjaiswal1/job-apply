@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<style>
+  @page { size: A4; margin: 1in; }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body { font-family: 'Inter', system-ui, sans-serif; font-size: 11pt; color: #2c2c2c; line-height: 1.6; }
+  .header { margin-bottom: 24pt; }
+  .name { font-size: 14pt; font-weight: 600; color: #1a1a2e; }
+  .contact { font-size: 10pt; color: #4a4a6a; margin-top: 4pt; }
+  .contact span + span::before { content: " · "; }
+  .date { margin: 16pt 0; font-size: 11pt; }
+  .salutation { margin-bottom: 14pt; }
+  p { margin-bottom: 14pt; max-width: 5.5in; }
+  .closing { margin-top: 24pt; }
+</style>
+</head>
+<body>
+<div class="header">
+  <div class="name">{{ name }}</div>
+  <div class="contact">
+    <span>{{ email }}</span>
+    {% if phone %}<span>{{ phone }}</span>{% endif %}
+    {% if linkedin %}<span>{{ linkedin }}</span>{% endif %}
+  </div>
+</div>
+<div class="date">{{ date }}</div>
+<div class="salutation">{{ salutation }}</div>
+{% for paragraph in letter_body.split('\n\n') %}
+<p>{{ paragraph }}</p>
+{% endfor %}
+<div class="closing">
+  Regards,<br>
+  {{ name }}
+</div>
+</body>
+</html>

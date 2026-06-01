@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<style>
+  @page { size: A4; margin: 0.75in; }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body { font-family: "Times New Roman", Times, serif; font-size: 10.5pt; line-height: 1.3; color: #000; }
+  h1.name { font-size: 18pt; font-weight: bold; text-align: center; margin-bottom: 4pt; }
+  .contact { font-size: 10pt; text-align: center; margin-bottom: 10pt; }
+  .contact span + span::before { content: " · "; }
+  .section-header { font-size: 11pt; font-weight: bold; text-transform: uppercase;
+    border-bottom: 1.5px solid #000; margin-top: 12pt; margin-bottom: 4pt; }
+  .job-header { display: flex; justify-content: space-between; }
+  .job-title { font-weight: bold; font-size: 10.5pt; }
+  .company { font-size: 10pt; margin-bottom: 2pt; }
+  ul { padding-left: 1.2em; list-style-type: disc; margin-bottom: 6pt; }
+  li { font-size: 10.5pt; line-height: 1.3; margin-bottom: 1pt; }
+  .skills { font-size: 10.5pt; }
+  .edu-entry { margin-bottom: 4pt; }
+</style>
+</head>
+<body>
+<h1 class="name">{{ name }}</h1>
+<div class="contact">
+  <span>{{ email }}</span>
+  <span>{{ phone }}</span>
+  {% if linkedin %}<span>{{ linkedin }}</span>{% endif %}
+  {% if github %}<span>{{ github }}</span>{% endif %}
+</div>
+
+{% if summary %}
+<div class="section-header">Summary</div>
+<p>{{ summary }}</p>
+{% endif %}
+
+{% if experience %}
+<div class="section-header">Experience</div>
+{% for job in experience %}
+<div class="job-header">
+  <span class="job-title">{{ job.title }}</span>
+  <span>{{ job.start }}{% if job.end %} – {{ job.end }}{% endif %}</span>
+</div>
+<div class="company">{{ job.company }}{% if job.location %}, {{ job.location }}{% endif %}</div>
+{% if job.bullets %}
+<ul>{% for b in job.bullets %}<li>{{ b }}</li>{% endfor %}</ul>
+{% endif %}
+{% endfor %}
+{% endif %}
+
+{% if education %}
+<div class="section-header">Education</div>
+{% for edu in education %}
+<div class="edu-entry">{{ edu.degree }} · {{ edu.school }}{% if edu.year %} · {{ edu.year }}{% endif %}</div>
+{% endfor %}
+{% endif %}
+
+{% if skills %}
+<div class="section-header">Skills</div>
+<div class="skills">{{ skills | join(", ") }}</div>
+{% endif %}
+</body>
+</html>
